@@ -1,0 +1,19 @@
+[ {
+  "id" : "c785fa69-bb18-e150-2b8d-583a187fbe55",
+  "name" : "header_logo",
+  "display_width" : null,
+  "label" : "header logo",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : "https://23836458.fs1.hubspotusercontent-na1.net/hubfs/23836458/Logos%20(1).png",
+    "alt" : "Logos (1)",
+    "loading" : "lazy",
+    "width" : 176,
+    "height" : 56
+  }
+} ]

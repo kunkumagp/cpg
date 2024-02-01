@@ -1,0 +1,35 @@
+.our-services h4{
+  font-weight: 700;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.our-services .service{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.our-services .service .number{
+  width: 50px;
+  height: 38px;
+  margin-right: 16px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  padding: 3px 13px;
+}
+.our-services .service .content{
+  padding: 16px 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 767px){
+  .our-services-wrapper{
+    padding: 0 !important;
+  }
+}
+@media screen and (min-width: 768px){
+
+}
