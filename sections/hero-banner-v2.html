@@ -1,0 +1,107 @@
+<!--
+  templateType: section
+  label: Hero banner
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/hero-banner.png
+  description: "Full size background image section separated in two columns. Left column has heading and text and right column has a form."
+-->
+  {% dnd_section
+     max_width=1040,
+     vertical_alignment="MIDDLE",
+     background_color= {{theme.colors.accent_one.color}},
+     padding={
+         'default': {'top': 64, 'bottom': 64 }
+     }
+  %}
+    {% dnd_column
+       padding={
+         'default': { 'left': 0, 'right': 0 },
+         'mobile': { 'left': 20, 'right': 20 }
+       }
+    %}
+      {% dnd_row %}
+        {% dnd_module
+           path="@hubspot/rich_text",
+           horizontal_alignment="CENTER",
+           html="<h1 style='margin-bottom: 32px; font-size:56px; text-align: center;'>Register for outdoor retailer for Summer June 19-21, 2023</h1>
+           <h3 style='color:#63666A; text-align: center; font-size:29px;'>Top 10 reasons why you should exhibit at Outdoor Retailer...</h3>"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row
+              margin={
+                 'default': { 'top': 45}
+              }%}
+          {% dnd_column
+             width=7,
+             padding={
+                'default': { 'right': 25},
+                'mobile' :{'right': 0}
+             }
+          %}
+              {% dnd_row
+                  margin={
+                     'default': { 'bottom': 30},
+                  }
+              %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  img={
+                    "alt": context.image_alt || "kitchen",
+                    "loading": "lazy",
+                    "max_height": context.image_height || 380,
+                    "max_width": context.image_width || 570,
+                    "size_type": "auto_custom_max",
+                    "src": context.image || get_asset_url("../images/hero-image.png")
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                 {% dnd_module
+                       path="@hubspot/rich_text",
+                       horizontal_alignment="CENTER",
+                       html="
+                       <p><span style='font-weight: 500;'>The original outdoor powerhouse.</span><br>Since 1983, Outdoor Retailer has hosted the largest gatherings of outdoor and snowsports industry professionals in the nation/world — drawing up to 20,000+ registered attendees* each year.</p>
+<p><span style='font-weight: 500;'>A booming industry.</span><br>Outdoor recreation generates $800+ billion USD in consumer spending, and the industry continues to grow.</p>
+<p><span style='font-weight: 500;'>A national and global reach.</span><br>Outdoor Retailer provides access to industry experts from all 50 U.S. states and dozens of countries.</p>
+<p><span style='font-weight: 500;'>Intentional buying starts here.</span><br>Strategically staged during pivotal frames of buying seasons, the shows offer high-level views of product offerings across all categories — leading to informed buying decisions from as many as 10,000+ retail buyers and importer/distributors* per year.</p>
+<p><span style='font-weight: 500;'>Soak up the spotlight.</span><br>With 1000+ working media persons* in attendance each year, experts are on the search to bring the latest stories and modern products into the outdoor marketplace.</p>
+<p><span style='font-weight: 500;'>A launching point.</span><br>With an average of 300+ exhibitors* in attendance each show, Outdoor Retailer is regarded as a launching point for new brands and products.</p>
+<p><span style='font-weight: 500;'>Celebrate the industry.</span><br>The shows are a hub for advanced innovation and flourishing inspiration, and those who are paving the way are recognized annually at the Innovation Awards and Inspiration Awards.</p>
+                       "
+                  %}
+                  {% end_dnd_module %}
+              {% end_dnd_row %}
+          {% end_dnd_column %}
+{% dnd_column offset=7, width=5,
+              padding={
+                 'default': { 'left': 35},
+                 'mobile' :{'left': 0}
+              }
+          %}
+             {% dnd_row %}
+                 {% dnd_module
+                    path='@hubspot/form',
+                    title="Title here",
+                    extra_classes="hero_form",
+                    form= { "form_id": "5c521ad5-3324-489c-8d51-7c0262284e04", "response_type": "redirect", "message": "Thanks for submitting the form."}
+                  %}
+                {% end_dnd_module %}
+             {% end_dnd_row %}
+            {% dnd_row
+               margin={
+                 'default': { 'top': 10},
+              }
+            %}
+              {% dnd_module
+                 path="@hubspot/rich_text",
+                 horizontal_alignment="LEFT",
+                 html="<p style='font-size: 12px; color:#63666A !important; line-height: normal;'>We respect your personal information. <br/>Please read our <a href='https://www.camplify.com.au/terms' style=' font-weight:500; text-decoration: underline;'>Privacy Policy</a></p>"
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
