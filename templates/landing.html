@@ -1,0 +1,75 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing Page
+  screenshotPath: ../images/slts-theme-preview.png
+-->
+{% extends "./layouts/base-landing-page.html" %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section"
+%}
+
+  {# Header container #}
+  {% include_dnd_partial path="../sections/Header-container-v2.html" %}
+
+  {# Banner message #}
+  {% include_dnd_partial path="../sections/banner-message-v2.html" %}
+
+  {# Hero banner #}
+  {% include_dnd_partial path="../sections/hero-banner-v2.html" %}
+
+  {# Call to action #}
+  {% include_dnd_partial path="../sections/call-to-action-v2.html" %}
+
+  {# Icons and copy #}
+  {% include_dnd_partial path="../sections/icon-and-copy-v2.html" %}
+
+  {# Floating CTA - Image #}
+  {% include_dnd_partial path="../sections/floating-cta-image-v2.html" %}
+
+  {# Floating CTA - Resource #}
+  {% include_dnd_partial path="../sections/floating-cta-resource-v2.html" %}
+
+  {# Multi-Row content #}
+  {% include_dnd_partial path="../sections/multi-row-content-v2.html" %}
+
+  {# Customer reviews #}
+  {% include_dnd_partial path="../sections/customer-reviews-v2.html" %}
+
+  {# Business logos #}
+  {% include_dnd_partial path="../sections/business-logos-v2.html" %}
+
+  {# Pricing cards #}
+  {% include_dnd_partial path="../sections/pricing-card-v2.html" %}
+
+  {# FAQs accordion #}
+  {% include_dnd_partial path="../sections/faqs-accordion-v2.html" %}
+
+  {# Simple content #}
+  {% include_dnd_partial path="../sections/simple-content-v2.html" %}
+
+  {# Multi-Column content #}
+  {% include_dnd_partial path="../sections/multi-column-content-v2.html" %}
+
+  {# Tab content #}
+  {% include_dnd_partial path="../sections/tab-content-v2.html" %}
+
+  {# Video content #}
+  {% include_dnd_partial path="../sections/video-content-v2.html" %}
+
+  {# Card carousel #}
+  {% include_dnd_partial path="../sections/card-carousel-v2.html" %}
+
+  {# Hero testimonial #}
+  {% include_dnd_partial path="../sections/hero-testimonial-v2.html" %}
+
+  {# End page CTA #}
+  {% include_dnd_partial path="../sections/end-page-cta-v2.html" %}
+
+  {# Footer container #}
+  {% include_dnd_partial path="../sections/Footer-container.html" %}
+
+{% end_dnd_area %}
+{% endblock body %}

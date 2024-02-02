@@ -1,0 +1,31 @@
+{% require_css %}
+<style type="text/css">
+  .our-services-wrapper{
+    {{ module.style.spacing_field.css }}
+  }
+  .our-services h4{
+    color: {{ theme.colors.body_text_color.color }};
+    border-bottom: 2px solid {{ theme.colors.body_text_color.color }};
+  }
+  .our-services .service .number{
+    background-color: {{ theme.colors.accent_one.color }};
+  }
+  .our-services .service .content{
+    border-bottom: 2px solid #DEDFE0;
+  }
+</style>
+{% end_require_css %}
+
+<div class="our-services-wrapper">
+  <div class="our-services">
+    <h4>{{ module.title }}</h4>
+    {% for item in module.services %}
+    <div class="service">
+      <div class="number">{{loop.index}}</div>
+      <div class="content">
+        {{ item.service_name }} {{ item.service_info }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

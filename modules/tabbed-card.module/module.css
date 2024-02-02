@@ -1,0 +1,38 @@
+/* Tabs container */
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+
+/* Tabs */
+
+.tabs__tab {
+  position: relative;
+}
+
+.tabs__tab,
+.tabs__tab:hover,
+.tabs__tab:focus,
+.tabs__tab:active {
+  padding: 8px 16px;
+  margin: 6px;
+  border-radius: 4px;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.tabs__tab[aria-selected='true'] {
+  font-weight: bold;
+}
+
+
+/* Tab content */
+
+.tabs__content {
+  padding: 2.8rem;
+}

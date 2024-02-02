@@ -1,0 +1,53 @@
+<!--
+  templateType: section
+  label: FAQs Accordion
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/faq-accordion.png
+  description: "Custom accordion for FAQs"
+-->
+{% dnd_section
+     max_width=840,
+     vertical_alignment='TOP',
+     background_color="#FFFFFF",
+     padding={
+          'default': {'top': 64,'bottom': 64, 'left': 20, 'right': 20 },
+          'mobile': {'top': 42,'bottom': 42 }
+     }
+  %}
+    {% dnd_column
+       padding={
+         'left': 0, 'right': 0
+       }
+    %}
+
+      {% dnd_row
+         padding={ 'top': 0, "bottom": 16 }
+      %}
+        {% dnd_module 
+           path="@hubspot/rich_text",
+           horizontal_alignment="CENTER",
+           html="<h3 style='margin-bottom: 0; color:{{theme.colors.body_text_color.color}}; text-align: center;'>Frequently Asked Questions</h3>"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+
+      {% dnd_row
+         padding={ "bottom": 36  }
+      %}
+        {% dnd_module 
+           path="@hubspot/rich_text",
+           horizontal_alignment="CENTER",
+           html="<h4 style='margin-bottom: 0; color: #63666A; font-weight: 500; font-family: Gilroy;'>Subtitle Here</h4>"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+
+      {% dnd_row %}
+        {% dnd_module "custom_accordion"
+           path="../modules/custom-accordion"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+
+    {% end_dnd_column %}
+  {% end_dnd_section %}
