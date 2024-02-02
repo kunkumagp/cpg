@@ -1,8 +1,0 @@
-{
-  "global" : true,
-  "smart_type" : "NOT_SMART",
-  "host_template_types" : [ "EMAIL" ],
-  "module_id" : 132146266530,
-  "label" : "Outdoor Retailer Winter Header",
-  "is_available_for_new_content" : true
-}
