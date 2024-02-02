@@ -1,0 +1,72 @@
+<!--
+  templateType: section
+  label: Simple content
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/simple-content.png
+  description: "Simple content with CTA"
+-->
+{% dnd_section
+   max_width=570,
+   vertical_alignment="MIDDLE",
+   background_color={{theme.colors.accent_one.color}},
+   padding={
+        'default': {'top': 64,'bottom': 64, 'left': 20, 'right': 20 },
+        'mobile': {'top': 42,'bottom': 42 }
+   }
+ %}
+    {% dnd_column
+       padding={
+          "default" : { "left" : 0, "right" : 0 }
+       }
+    %}
+
+      {% dnd_row
+         padding={ "bottom": 16 }
+      %}
+        {% dnd_module 
+           path="@hubspot/rich_text",
+           horizontal_alignment="LEFT",
+           html="<h2 style='margin-bottom: 0;'>Title here</h2>"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+
+      {% dnd_row
+         padding={ "bottom": 36  }
+      %}
+        {% dnd_module 
+           path="@hubspot/rich_text",
+           horizontal_alignment="LEFT",
+           html="<h4 style='margin-bottom: 0; color: #63666A; '>Subtitle Here</h4>"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+
+      {% dnd_row
+         padding={ "bottom": 36  }
+      %}
+        {% dnd_module 
+           path="@hubspot/rich_text",
+           horizontal_alignment="LEFT",
+           html="<p style='margin-bottom: 15px;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+
+      {% dnd_row %}
+        {% dnd_module
+           path='../modules/button',
+           offset=0,
+           width=12,
+           styles={
+             "presets" : {
+                "button_size" : "regular",
+                "button_style" : "secondary"
+             }
+           }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+
+    {% end_dnd_column %}
+  {% end_dnd_section %}
