@@ -1,0 +1,19 @@
+/* Layout */
+
+.header__container {
+  position: relative;
+}
+
+.header__wrapper {
+  text-align: center;
+  padding: 24px 0;
+  margin: 0 auto;
+}
+
+.header__logo{
+  line-height: 0;
+}
+
+@media (max-width: 767px) {
+ 
+}
